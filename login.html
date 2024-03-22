@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="kr">
+ <!DOCTYPE html>
+< lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -233,9 +233,9 @@ footer{
 }
 </style>
 </head>
-<body>
+
     <div class="container">
-        <!-- Head -->
+        <form action="process-signup.php" method="post"></form>
         <h1><img src="img/logo.png" class="img-fluid"/><span>집하자</span></h1>
         <!-- Links -->
         <ul class="links">
@@ -291,52 +291,56 @@ footer{
         </p>
         
       </footer>
+
+
 <script>
-  $(document).ready(function(){
-    let signup = $(".links").find("li").find("#signup") ; 
-    let signin = $(".links").find("li").find("#signin") ;
-    let reset  = $(".links").find("li").find("#reset")  ; 
-    let first_input = $("form").find(".first-input");
-    let hidden_input = $("form").find(".input__block").find("#repeat__password");
-    let signin_btn  = $("form").find(".signin__btn");
-  
-    //----------- sign up ---------------------
-    signup.on("click",function(e){
+  document.addEventListener("DOMContentLoaded", function() {
+    let signup = document.querySelector("#signup");
+    let signin = document.querySelector("#signin");
+    let reset = document.querySelector("#reset");
+    let firstInput = document.querySelector(".first-input");
+    let hiddenInput = document.querySelector("#repeat__password");
+    let signinBtn = document.querySelector(".signin__btn");
+
+    // Sign Up
+    signup.addEventListener("click", function(e) {
       e.preventDefault();
-      $(this).parent().parent().siblings("h1").text("집하자");
-      $(this).parent().css("opacity","1");
-      $(this).parent().siblings().css("opacity",".6");
-      first_input.removeClass("first-input__block").addClass("signup-input__block");
-      hidden_input.css({
-        "opacity" : "1",
-        "display" : "block"
+      document.querySelector("h1").innerHTML = '<img src="img/logo.png" class="img-fluid"/><span>집하자</span>';
+      this.parentElement.style.opacity = "1";
+      Array.from(this.parentElement.parentElement.children).forEach(child => {
+        if (child !== this.parentElement)
+          child.style.opacity = ".6";
       });
-      signin_btn.text("회원가입");
+      firstInput.classList.remove("first-input__block");
+      firstInput.classList.add("signup-input__block");
+      hiddenInput.style.opacity = "1";
+      hiddenInput.style.display = "block";
+      signinBtn.textContent = "회원가입";
     });
-    
-  
-   //------- sign in ---------------------
-   signin.on("click",function(e){
+
+    // Sign In
+    signin.addEventListener("click", function(e) {
       e.preventDefault();
-      $(this).parent().parent().siblings("h1").text("로그인");
-      $(this).parent().css("opacity","1");
-      $(this).parent().siblings().css("opacity",".6");
-      first_input.addClass("first-input__block")
-        .removeClass("signup-input__block");
-      hidden_input.css({
-        "opacity" : "0",
-        "display" : "none"
+      document.querySelector("h1").innerHTML = '<img src="img/logo.png" class="img-fluid"/><span>집하자</span>';
+      this.parentElement.style.opacity = "1";
+      Array.from(this.parentElement.parentElement.children).forEach(child => {
+        if (child !== this.parentElement)
+          child.style.opacity = ".6";
       });
-      signin_btn.text("로그인");
+      firstInput.classList.remove("signup-input__block");
+      firstInput.classList.add("first-input__block");
+      hiddenInput.style.opacity = "0";
+      hiddenInput.style.display = "none";
+      signinBtn.textContent = "로그인";
     });
-   
-   //————— reset ——————————
-   reset.on("click",function(e){
-     e.preventDefault();
-     $(this).parent().parent().siblings("form")
-     .find(".input__block").find(".input").val("");
-   })
-});
+
+    // Reset
+    reset.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector("form").reset();
+    });
+  });
 </script>
+
 </body>
 </html>
