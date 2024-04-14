@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title> dashboard</title>
+        <title>집하자</title>
 	    <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 	    <!----css3---->
@@ -13,566 +13,556 @@
 		
 		
 		<!--google fonts -->
-	
 	    <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 	
 	
-	<!--google material icon-->
+	   <!--google material icon-->
       <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
+	  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 
   </head>
   <body>
   
 
+
 <div class="wrapper">
-
-
-        <div class="body-overlay"></div>
+     
+	  <div class="body-overlay"></div>
+	 
+	 <!-------sidebar--design------------>
+	 
+	 <div id="sidebar">
+	    <div class="sidebar-header">
+		   <h3><img src="img/logo.png" class="img-fluid"/><span>집하자</span></h3>
+		</div>
+		<ul class="list-unstyled component m-0">
+		  <li class="active">
+		  <a href="#" class="dashboard"><i class="material-icons">dashboard</i>dashboard </a>
+		  </li>
+		  
+		  <li class="dropdown">
+		  <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">folder</i>작업
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+		     <li><a href="#"> 1</a></li>
+			 
+		  </ul>
+		  </li>
+		  
 		
-		<!-------------------------sidebar------------>
-		     <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3><img src="img/logo.png" class="img-fluid"/><span>집하자</span></h3>
-            </div>
-            <ul class="list-unstyled components">
-			<li  class="active">
-                    <a href="#" class="dashboard"><i class="material-icons">dashboard</i>
-					<span>Dashboard</span></a>
-                </li>
-		
-
-                <li class="dropdown">
-                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">aspect_ratio</i>Layouts</a>
-                    <ul class="collapse list-unstyled menu" id="homeSubmenu1">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">apps</i><span>widgets</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu2">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-				
-				 <li class="dropdown">
-                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">equalizer</i>
-				
-					
-					<span>chart</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu3">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-				  <li class="dropdown">
-                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">extension</i><span>ui element</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu4">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-				
-				<li class="dropdown">
-                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">border_color</i><span>forms</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu5">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-               
-			   
-			   
-			   <li class="dropdown">
-                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">grid_on</i><span>tables</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu6">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-               
-			   
-			     <li class="dropdown">
-                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" 
-					class="dropdown-toggle">
-					<i class="material-icons">content_copy</i><span>Pages</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu7">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-               
-               <li class="">
-                    <a href="#"><i class="material-icons">date_range</i><span>copy</span></a>
-                </li>
-				
-				 <li  class="">
-                    <a href="#"><i class="material-icons">library_books</i><span>Calender
-					</span></a>
-                </li>
-               
-               
-            </ul>
-
-           
-        </nav>
-		
-		
-		
-		
-		<!--------page-content---------------->
-		
-		<div id="content">
+		  
+		   <li class="dropdown">
+		  <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">equalizer</i>등록 리스트
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu3">
+		     <li><a href="#">리스트 1</a></li>
+			 
+		  </ul>
+		  </li>
+		  
+		  
+		   <li class="dropdown">
+		  <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">extension</i>등록 내용
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu4">
+		     <li><a href="#"> 1</a></li>
+			 <li><a href="#"> 2</a></li>
+			 <li><a href="#"> 3</a></li>
+		  </ul>
+		  </li>
+		  
+		   <li class="dropdown">
+		  <a href="#homeSubmenu5" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">border_color</i>보고서
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu5">
+		     <li><a href="#">보고서 1</a></li>
+			 <li><a href="#">보고서 2</a></li>
+			 <li><a href="#">보고서 3</a></li>
+		  </ul>
+		  </li>
+		  
+		  <li class="dropdown">
+		  <a href="#homeSubmenu6" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">grid_on</i>관리
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu6">
+		     <li><a href="#"> 1</a></li>
+			 <li><a href="#">2</a></li>
+			 <li><a href="#">3</a></li>
+		  </ul>
+		  </li>
+		  
+		  
+		  <li class="dropdown">
+		  <a href="#homeSubmenu7" data-toggle="collapse" aria-expanded="false" 
+		  class="dropdown-toggle">
+		  <i class="material-icons">content_copy</i>조회
+		  </a>
+		  <ul class="collapse list-unstyled menu" id="homeSubmenu7">
+		     <li><a href="#">1</a></li>
+			 <li><a href="#">2</a></li>
+			 <li><a href="#">3</a></li>
+		  </ul>
+		  </li>
+		  
 		   
-		   <!--top--navbar----design--------->
-		   
-		   <div class="top-navbar">
-		      <div class="xp-topbar">
-
-                <!-- Start XP Row -->
-                <div class="row"> 
-                    <!-- Start XP Col -->
-                    <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
-                        <div class="xp-menubar">
-                               <span class="material-icons text-white">signal_cellular_alt
-							   </span>
-                         </div>
-                    </div> 
-                    <!-- End XP Col -->
-
-                    <!-- Start XP Col -->
-                    <div class="col-md-5 col-lg-3 order-3 order-md-2">
-                        <div class="xp-searchbar">
-                            <form>
-                                <div class="input-group">
-                                  <input type="search" class="form-control" 
+		  
+		
+		</ul>
+	 </div>
+	 
+   <!-------sidebar--design- close----------->
+   
+   
+   
+      <!-------page-content start----------->
+   
+      <div id="content">
+	     
+		  <!------top-navbar-start-----------> 
+		     
+		  <div class="top-navbar">
+		     <div class="xd-topbar">
+			     <div class="row">
+				     <div class="col-2 col-md-1 col-lg-1 order-2 order-md-1 align-self-center">
+					    <div class="xp-menubar">
+						    <span class="material-icons text-white">signal_cellular_alt</span>
+						</div>
+					 </div>
+					 
+					 <div class="col-md-5 col-lg-3 order-3 order-md-2">
+					     <div class="xp-searchbar">
+						     <form>
+							    <div class="input-group">
+								  <input type="search" class="form-control"
 								  placeholder="Search">
-                                  <div class="input-group-append">
-                                    <button class="btn" type="submit" 
-									id="button-addon2">GO</button>
-                                  </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End XP Col -->
-
-                    <!-- Start XP Col -->
-                    <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
-                        <div class="xp-profilebar text-right">
-							 <nav class="navbar p-0">
-                        <ul class="nav navbar-nav flex-row ml-auto">   
-                            <li class="dropdown nav-item active">
-                                <a href="#" class="nav-link" data-toggle="dropdown">
-                                   <span class="material-icons">notifications</span>
-								   <span class="notification">4</span>
-                               </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">You have 5 new messages</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">You're now friend with Mike</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Wish Mary on her birthday!</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">5 warnings in Server Console</a>
-                                    </li>
-                                  
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-								<span class="material-icons">question_answer</span>
-
-								</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" data-toggle="dropdown">
-								<img src="img/user.jpg" style="width:40px; border-radius:50%;"/>
-								<span class="xp-user-live"></span>
-								</a>
-								<ul class="dropdown-menu small-menu">
-                                    <li>
-                                        <a href="#">
-										  <span class="material-icons">
-person_outline
-</span>Profile
-
-										</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="material-icons">
-settings
-</span>Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><span class="material-icons">
-logout</span>Logout</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    
-               
-            </nav>
-							
-                        </div>
-                    </div>
-                    <!-- End XP Col -->
-
-                </div> 
-                <!-- End XP Row -->
-
-            </div>
-		     <div class="xp-breadcrumbbar text-center">
-                <h4 class="page-title">Dashboard</h4>  
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Booster</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                  </ol>                
-            </div>
-			
-		   </div>
-		   
-		   
-		   
-		   <!--------main-content------------->
-		   
-		   <div class="main-content">
-			  <div class="row">
-			    
-				<div class="col-md-12">
-				<div class="table-wrapper">
-    <div class="table-title">
-      <div class="row">
-        <div class="col-sm-6 p-0 d-flex justify-content-lg-start justify-content-center">
-          <h2 class="ml-lg-2">Manage Employees</h2>
-        </div>
-        <div class="col-sm-6 p-0 d-flex justify-content-lg-end justify-content-center">
-          <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
-		  <i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
-          <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
-		  <i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
-        </div>
+								  <div class="input-group-append">
+								     <button class="btn" type="submit" id="button-addon2">찾기
+									 </button>
+								  </div>
+								</div>
+							 </form>
+						 </div>
+					 </div>
+					 
+					 
+					 <div class="col-10 col-md-6 col-lg-8 order-1 order-md-3">
+					     <div class="xp-profilebar text-right">
+						    <nav class="navbar p-0">
+							   <ul class="nav navbar-nav flex-row ml-auto">
+							   <li class="dropdown nav-item active">
+							     <a class="nav-link" href="#" data-toggle="dropdown">
+								  <span class="material-icons">알림</span>
+								  <span class="notification">4</span>
+								 </a>
+								  <ul class="dropdown-menu">
+								     <li><a href="#">4개의 새 메시지가 있습니다</a></li>
+									 <li><a href="#">4개의 새 메시지가 있습니다</a></li>
+									 <li><a href="#">4개의 새 메시지가 있습니다</a></li>
+									 <li><a href="#">4개의 새 메시지가 있습니다</a></li>
+								  </ul>
+							   </li>
+							   
+							   <li class="nav-item">
+							     <a class="nav-link" href="#">
+								   <span class="material-icons">question_answer</span>
+								 </a>
+							   </li>
+							   
+							   <li class="dropdown nav-item">
+							     <a class="nav-link" href="#" data-toggle="dropdown">
+								  <img src="img/user.jpg" style="width:40px; border-radius:50%;"/>
+								  <span class="xp-user-live"></span>
+								 </a>
+								  <ul class="dropdown-menu small-menu">
+								     <li><a href="#">
+									 <span class="material-icons">개인정보</span>
+									
+									 </a></li>
+									 <li><a href="#">
+									 <span class="material-icons">설정</span>
+									 
+									 </a></li>
+									 <li><a href="#">
+									 <span class="material-icons">로그아웃</span>
+									 
+									 </a></li>
+									 
+								  </ul>
+							   </li>
+							   
+							   
+							   </ul>
+							</nav>
+						 </div>
+					 </div>
+					 
+				 </div>
+				 
+				 <div class="xp-breadcrumbbar text-center">
+				    <h4  class="page-title">Dashboard</h4>
+					<ol class="breadcrumb">
+					  <li class="breadcrumb-item"><a href="#">집하자</a></li>
+					  <li class="breadcrumb-item active" aria-curent="page">Dashboard</li>
+					</ol>
+				 </div>
+				 
+				 
+			 </div>
+		  </div>
+		  <!------top-navbar-end-----------> 
+		  
+		  
+		   <!------main-content-start-----------> 
+		     
+		      <div class="main-content">
+			     <div class="row">
+				    <div class="col-md-12">
+					   <div class="table-wrapper">
+					     
+					   <div class="table-title">
+					     <div class="row">
+						     <div class="col-sm-6 p-0 flex justify-content-lg-start justify-content-center">
+							    <h2 class="ml-lg-2">작업 관리</h2>
+							 </div>
+							 <div class="col-sm-6 p-0 flex justify-content-lg-end justify-content-center">
+							   <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
+							   <i class="material-icons">&#xE147;</i>
+							   <span>새 작업 추가</span>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal">
+							   <i class="material-icons">&#xE15C;</i>
+							   <span>삭제</span>
+							   </a>
+							 </div>
+					     </div>
+					   </div>
+					   
+					   <table class="table table-striped table-hover">
+					      <thead>
+						     <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="selectAll">
+							 <label for="selectAll"></label></th>
+							 <th>고객명</th>
+							 <th>접수일</th>
+							 <th>점검일</th>
+							 <th>이메일</th>
+							 <th>주소</th>
+							 <th>아파트명</th>
+							 <th>전화번호</th>
+							 <th> 상태</th>
+							 <th>담담자</th>
+							 <th>관리</th>
+							 </tr>
+						  </thead>
+						  
+						  <tbody>
+						      <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="checkbox1" name="option[]" value="1">
+							 <label for="checkbox1"></label></th>
+							 <th>김민수</th>
+							 <th>2024.01.12</th>
+							 <th>2024.01.21</th>
+							 <th>minsu123@gmail.com</th>
+							 <th>서울특별시 노원구 한글비석로 346 </th>
+							 <th>가아 아파트</th>
+							 <th>010-0000-0000</th>
+							 <th> 대기</th>
+							 <th>김민수</th>
+							 <th>
+							    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							   </a>
+							 </th>
+							 </tr>
+							 
+							 
+							  <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="checkbox2" name="option[]" value="1">
+							 <label for="checkbox2"></label></th>
+							 <th>이수진</th>
+							 <th>2024.01.12</th>
+							 <th>2024.01.21</th>
+							 <th>sujinn@gmail.com</th>
+							 <th>서울특별시 중랑구 신내로17길 106</th>
+							 <th>라아아파트</th>
+							 <th>010-1111-1111</th>
+							 <th> 대기</th>
+							 <th>이이경</th>
+							 <th>
+							    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							   </a>
+							 </th>
+							 </tr>
+							 
+							 
+							 <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="checkbox3" name="option[]" value="1">
+							 <label for="checkbox3"></label></th>
+							 <th>조수빈</th>
+							 <th>2024.01.12</th>
+							 <th>2024.01.21</th>
+							 <th>subinnjoo@gmail.com</th>
+							 <th>충청남도 당진시 먹거리길 80-16</th>
+							 <th>호라아파트</th>
+							 <th>010-2222-2222</th>
+							 <th> 대기</th>
+							 <th>김탄</th>
+							 <th>
+							    <a href="#edit" class="edit" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							   </a>
+							 </th>
+							 </tr>
+							 
+							  <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="checkbox4" name="option[]" value="1">
+							 <label for="checkbox4"></label></th>
+							 <th>박민영</th>
+							 <th>2024.01.12</th>
+							 <th>2024.01.21</th>
+							 <th>min0park@gmail.com</th>
+							 <th> 전라북도 정읍시 수성4로 33-6 </th>
+							 <th>소라 아파트</th>
+							 <th>010-3333-3333</th>
+							 <th> 대기</th>
+							 <th>박민규</th>
+							 <th>
+							    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							   </a>
+							 </th>
+							 </tr>
+							 
+							  <tr>
+							 <th><span class="custom-checkbox">
+							 <input type="checkbox" id="checkbox5" name="option[]" value="1">
+							 <label for="checkbox5"></label></th>
+							 <th>이보영</th>
+							 <th>2024.01.12</th>
+							 <th>2024.01.21</th>
+							 <th>vuf234@gmail.com</th>
+							 <th> 경상남도 창원시 의창구 의안로56번길 40</th>
+							 <th>포로아파트</th>
+							 <th>010-4444-4444</th>
+							 <th> 대기</th>
+							 <th>김보경</th>
+							 
+							 <th>
+							    <a href="#editEmployeeModal" class="edit" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							   </a>
+							   <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
+							   <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							   </a>
+							 </th>
+							 </tr>
+							 
+						  </tbody>
+						  
+					      
+					   </table>
+					   
+					   <div class="clearfix">
+					     <div class="hint-text"> <b>5</b> 중 <b>25</b></div>
+					     <ul class="pagination">
+						    <li class="page-item disabled"><a href="#">이전</a></li>
+							<li class="page-item "><a href="#"class="page-link">1</a></li>
+							<li class="page-item "><a href="#"class="page-link">2</a></li>
+							<li class="page-item active"><a href="#"class="page-link">3</a></li>
+							<li class="page-item "><a href="#"class="page-link">4</a></li>
+							<li class="page-item "><a href="#"class="page-link">5</a></li>
+							<li class="page-item "><a href="#" class="page-link">다음</a></li>
+						 </ul>
+					   </div>
+					   </div>
+					</div>
+					
+					
+									   <!----add-modal start--------->
+		<div class="modal fade" tabindex="-1" id="addEmployeeModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">작업 추가</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+		
+		
       </div>
-    </div>
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="selectAll">
-								<label for="selectAll"></label>
-							</span>
-          </th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Address</th>
-          <th>Phone</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <span class="custom-checkbox">
-			<input type="checkbox" id="checkbox1" name="options[]" value="1">
-			<label for="checkbox1"></label>
-							</span>
-          </td>
-          <td>Thomas Hardy</td>
-          <td>thomashardy@mail.com</td>
-          <td>89 Chiaroscuro Rd, Portland, USA</td>
-          <td>(171) 555-2222</td>
-          <td>
-            <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="checkbox2" 
-								name="options[]" value="1">
-								<label for="checkbox2"></label>
-							</span>
-          </td>
-          <td>Dominique Perrier</td>
-          <td>dominiqueperrier@mail.com</td>
-          <td>Obere Str. 57, Berlin, Germany</td>
-          <td>(313) 555-5735</td>
-          <td>
-            <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="checkbox3"
-								name="options[]" value="1">
-								<label for="checkbox3"></label>
-							</span>
-          </td>
-          <td>Maria Anders</td>
-          <td>mariaanders@mail.com</td>
-          <td>25, rue Lauriston, Paris, France</td>
-          <td>(503) 555-9931</td>
-          <td>
-            <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="checkbox4" 
-								name="options[]" value="1">
-								<label for="checkbox4"></label>
-							</span>
-          </td>
-          <td>Fran Wilson</td>
-          <td>franwilson@mail.com</td>
-          <td>C/ Araquil, 67, Madrid, Spain</td>
-          <td>(204) 619-5731</td>
-          <td>
-            <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="custom-checkbox">
-								<input type="checkbox" id="checkbox5" 
-								name="options[]" value="1">
-								<label for="checkbox5"></label>
-							</span>
-          </td>
-          <td>Martin Blank</td>
-          <td>martinblank@mail.com</td>
-          <td>Via Monte Bianco 34, Turin, Italy</td>
-          <td>(480) 631-2097</td>
-          <td>
-            <a href="#editEmployeeModal" class="edit" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal">
-			<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clearfix">
-      <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-      <ul class="pagination">
-        <li class="page-item disabled"><a href="#">Previous</a></li>
-        <li class="page-item"><a href="#" class="page-link">1</a></li>
-        <li class="page-item"><a href="#" class="page-link">2</a></li>
-        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-        <li class="page-item"><a href="#" class="page-link">4</a></li>
-        <li class="page-item"><a href="#" class="page-link">5</a></li>
-        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- Edit Modal HTML -->
-<div id="addEmployeeModal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form>
-        <div class="modal-header">
-          <h4 class="modal-title">작업 추가</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label>이름</label>
-            <input type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>이메일</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>주소</label>
-            <textarea class="form-control" required></textarea>
-          </div>
-          <div class="form-group">
-            <label>전화번호</label>
-            <input type="text" class="form-control" required>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-          <input type="submit" class="btn btn-success" value="Add">
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- Edit Modal HTML -->
-<div id="editEmployeeModal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form>
-        <div class="modal-header">
-          <h4 class="modal-title">작업 수정</h4>
-          <button type="button" class="close" data-dismiss="modal" 
-		  aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label>이름</label>
-            <input type="text" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>이메일</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label>주소</label>
-            <textarea class="form-control" required></textarea>
-          </div>
-          <div class="form-group">
-            <label>전화번호</label>
-            <input type="text" class="form-control" required>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-          <input type="submit" class="btn btn-info" value="Save">
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <form>
-        <div class="modal-header">
-          <h4 class="modal-title">작업 삭제</h4>
-          <button type="button" class="close" data-dismiss="modal" 
-		  aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>이 작업을 삭제하시겠습니까?</p>
-          <p class="text-warning"><small>이 작업은 취소할 수 없습니다.</small></p>
-        </div>
-        <div class="modal-footer">
-          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-          <input type="submit" class="btn btn-danger" value="Delete">
-        </div>
-      </form>
-    </div>
-	</div>
-  </div>
-				
-		   
-			  </div>
-			 
-			 
-			 <!---footer---->
-			 
-			 
+      <div class="modal-body">
+        <div class="form-group">
+		    <label>이름</label>
+			<input type="text" class="form-control" required>
+		</div>
+		<div class="form-group">
+		    <label>이메인</label>
+			<input type="emil" class="form-control" required>
 		</div>
 		
-		<footer class="footer">
-			    <div class="container-fluid">
-				  <div class="footer-in">
-                    <p class="mb-0">캡스톤디자인 프로젝트</p>
-                </div>
-				</div>
-			 </footer>
+			<div class="form-group">
+				<label>주소</label>
+				<input type="text" id="addressInput" class="form-control" required>
+				<button type="button" class="btn btn-primary mt-2" onclick="openAddressSearch()">주소 찾기</button>
+			</div>
+		</div>
+	
+
+		<div class="form-group">
+		    <label>전화번호</label>
+			<input type="text" class="form-control" required>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">최소</button>
+        <button type="button" class="btn btn-success">추가</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+    function openAddressSearch() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // Set the selected address value to the input field
+                document.getElementById('addressInput').value = data.address;
+            }
+        }).open();
+    }
+</script>
+
+
+					   <!----edit-modal end--------->
+					   
+					   
+					   
+					   
+					   
+				   <!----edit-modal start--------->
+		<div class="modal fade" tabindex="-1" id="editEmployeeModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">작업 수정</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+		    <label>이름</label>
+			<input type="text" class="form-control" required>
+		</div>
+		<div class="form-group">
+		    <label>이메일</label>
+			<input type="emil" class="form-control" required>
+		</div>
+		<div class="form-group">
+		    <label>주소</label>
+			<textarea class="form-control" required></textarea>
+		</div>
+		<div class="form-group">
+		    <label>전화번호</label>
+			<input type="text" class="form-control" required>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-success">저장</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+					   <!----edit-modal end--------->	   
+					   
+					   
+					 <!----delete-modal start--------->
+		<div class="modal fade" tabindex="-1" id="deleteEmployeeModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">작업 삭제</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>이 작업을 삭제하시겠습니까?</p>
+		<p class="text-warning"><small>이 작업은 취소할 수 없습니다.</small></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-success">삭제</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+					   <!----edit-modal end--------->   
+					   
+					
+					
+				 
+			     </div>
+			  </div>
+		  
+		    <!------main-content-end-----------> 
+		  
+		 
+		 
+		 <!----footer-design------------->
+		 
+		 <footer class="footer">
+		    <div class="container-fluid">
+			   <div class="footer-in">
+			      <p class="mb-0">캡스톤 디자인 프로재트</p>
+			   </div>
+			</div>
+		 </footer>
+		 
+		 
+		 
+		 
+	  </div>
+   
 </div>
 
 
-<!----------html code compleate----------->
 
-
-
+<!-------complete html----------->
 
 
 
@@ -588,20 +578,18 @@ logout</span>Logout</a>
   
   
   <script type="text/javascript">
-        
-		$(document).ready(function(){
-		  $(".xp-menubar").on('click',function(){
-		    $('#sidebar').toggleClass('active');
-			$('#content').toggleClass('active');
+       $(document).ready(function(){
+	      $(".xp-menubar").on('click',function(){
+		    $("#sidebar").toggleClass('active');
+			$("#content").toggleClass('active');
 		  });
 		  
-		   $(".xp-menubar,.body-overlay").on('click',function(){
-		     $('#sidebar,.body-overlay').toggleClass('show-nav');
-		   });
+		  $('.xp-menubar,.body-overlay').on('click',function(){
+		     $("#sidebar,.body-overlay").toggleClass('show-nav');
+		  });
 		  
-		});
-		
-</script>
+	   });
+  </script>
   
   
 
