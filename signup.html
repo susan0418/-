@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>회원가입</title>
+    <title>집하자</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
     <script src="/js/validation.js" defer></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
 </head>
 <body>
     
@@ -19,9 +21,15 @@
         </div>
         
         <div>
-            <label for="email">메일</label>
-            <input type="email" id="email" name="email">
-        </div>
+          <label for="password">전화번호</label>
+          <input type="password" id="password" name="password">
+      </div>
+
+      <div>
+        <label for="password">메일</label>
+        <input type="password" id="password" name="password">
+    </div>
+      
         
         <div>
             <label for="password">비밀번호</label>
@@ -32,19 +40,59 @@
             <label for="password_confirmation">비밀번호 다시 입력하기</label>
             <input type="password" id="password_confirmation" name="password_confirmation">
         </div>
-        
+
+    
+ 
+    
         <button class="signin__btn">
             로그인
           </button>    </form>
     <div class="separator">
         <p>또는</p>
       </div>
-      <!-- kakao talk button -->
-      <button class="Kakao__btn">
-          <img src="img/kakaologo.png" alt="Kakao Logo" class="kakao-icon">
 
-       카카오 로그인
-      </button>
+    
+      <!-- kakao talk button -->
+      <button class="Kakao__btn" id="kakao-login-btn">
+        <img src="img/kakaologo.png" alt="Kakao Logo" class="kakao-icon">
+        카카오 로그인
+    </button>
+    <script>
+      Kakao.init('YOUR_KAKAO_APP_KEY'); // Replace 'YOUR_KAKAO_APP_KEY' with your actual Kakao app key
+  
+      document.getElementById('kakao-login-btn').addEventListener('click', function() {
+          Kakao.Auth.login({
+              success: function(authObj) {
+                  // Authentication successful, handle the response
+                  console.log('Successful login:', authObj);
+                  // Send the authObj to your server for further processing
+                  // For example, you can send it via AJAX to your backend
+                  /*
+                  fetch('/login', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(authObj)
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      // Handle server response
+                      console.log(data);
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+                  */
+              },
+              fail: function(err) {
+                  // Handle any errors that occur during the login process
+                  console.error('Failed to login:', err);
+              }
+          });
+      });
+  </script>
+  
 
     <style>
         body{
@@ -123,7 +171,7 @@ form{
     display: block;
     width: 0;
     height: 0;
-    background:#DBE5FD ;
+    background:#e9e9e9 ;
     border-left: 15px  solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 15px solid rgba(#0f132a, 0.1);
@@ -140,7 +188,7 @@ form{
         display:block;
         width:0;
         height:0;
-        background:#DBE5FD;
+        background:#ffffff;
         border-left:15px solid transparent;
         border-right:15px solid transparent;
         border-bottom:15px solid rgba(#0f132a,.1);
