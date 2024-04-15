@@ -1,8 +1,10 @@
- <!DOCTYPE html>
-< lang="kr">
+<!DOCTYPE html>
+<html lang="kr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
     <title>로그인 페이지</title>
     <style>
         body{
@@ -58,6 +60,7 @@ h1 img{
         font-weight:bolder;
         text-align:center;
         cursor : pointer;
+        font-size: 23px;
      }
    }
 }
@@ -243,11 +246,9 @@ footer{
             <a href="#" id="signin">로그인</a>
           </li>
           <li>
-            <a href="#" id="signup">회원가입</a>
+            <a href="signup.html">회원가입</a>
           </li>
-          <li>
-            <a href="#" id="reset">비밀번호 찾기</a>
-          </li>
+         
         </ul>
         
         <!-- Form -->
@@ -270,18 +271,55 @@ footer{
           </button>
         </form>
         <!-- separator -->
+        <div>
+          <p>비밀번호를 잊으셨나요? <a href="reset_password.html">여기를 클릭하세요.</a></p>
+      </div>
         <div class="separator">
           <p>또는</p>
-        </div>
-        <!-- kakao talk button -->
-        <button class="Kakao__btn">
-            <img src="img/kakaologo.png" alt="Kakao Logo" class="kakao-icon">
-
-         카카오 로그인
-        </button>
+      
         
       </div>
-      
+      <!-- kakao talk button -->
+      <button class="Kakao__btn" id="kakao-login-btn">
+        <img src="img/kakaologo.png" alt="Kakao Logo" class="kakao-icon">
+        카카오 로그인
+    </button>
+    <script>
+      Kakao.init('YOUR_KAKAO_APP_KEY'); // Replace 'YOUR_KAKAO_APP_KEY' with your actual Kakao app key
+  
+      document.getElementById('kakao-login-btn').addEventListener('click', function() {
+          Kakao.Auth.login({
+              success: function(authObj) {
+                  // Authentication successful, handle the response
+                  console.log('Successful login:', authObj);
+                  // Send the authObj to your server for further processing
+                  // For example, you can send it via AJAX to your backend
+                  /*
+                  fetch('/login', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify(authObj)
+                  })
+                  .then(response => response.json())
+                  .then(data => {
+                      // Handle server response
+                      console.log(data);
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+                  */
+              },
+              fail: function(err) {
+                  // Handle any errors that occur during the login process
+                  console.error('Failed to login:', err);
+              }
+          });
+      });
+  </script>
+    
       <footer>
         <p>
             켑스톤 디자인 프로재트
