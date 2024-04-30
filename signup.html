@@ -20,14 +20,9 @@
             <input type="text" id="name" name="name">
         </div>
 
-        <div>
-          <label for="password">전화번호</label>
-          <input type="password" id="password" name="password">
-      </div>
-
       <div>
-        <label for="password">메일</label>
-        <input type="password" id="password" name="password">
+        <label for="email">메일</label>
+        <input type="text" id="email" name="email">
     </div>
       
         
@@ -41,56 +36,12 @@
             <input type="password" id="password_confirmation" name="password_confirmation">
         </div>
 
-    
- 
-    
-        <button class="signin__btn">
-            로그인
-          </button>    </form>
     <div class="separator">
-        <p>또는</p>
-      </div>
-
+      <button class ="signin__btn">
+        회원 가입
+      </button>
+    </div>
     
-      <!-- kakao talk button -->
-      <button class="Kakao__btn" id="kakao-login-btn">
-        <img src="img/kakaologo.png" alt="Kakao Logo" class="kakao-icon">
-        카카오 로그인
-    </button>
-    <script>
-      Kakao.init('YOUR_KAKAO_APP_KEY'); // Replace 'YOUR_KAKAO_APP_KEY' with your actual Kakao app key
-  
-      document.getElementById('kakao-login-btn').addEventListener('click', function() {
-          Kakao.Auth.login({
-              success: function(authObj) {
-                  // Authentication successful, handle the response
-                  console.log('Successful login:', authObj);
-                  // Send the authObj to your server for further processing
-                  // For example, you can send it via AJAX to your backend
-                  /*
-                  fetch('/login', {
-                      method: 'POST',
-                      headers: {
-                          'Content-Type': 'application/json'
-                      },
-                      body: JSON.stringify(authObj)
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                      // Handle server response
-                      console.log(data);
-                  })
-                  .catch(error => {
-                      console.error('Error:', error);
-                  });
-                  */
-              },
-              fail: function(err) {
-                  // Handle any errors that occur during the login process
-                  console.error('Failed to login:', err);
-              }
-          });
-      });
   </script>
   
 
@@ -176,6 +127,7 @@ form{
     border-right: 15px solid transparent;
     border-bottom: 15px solid rgba(#0f132a, 0.1);
     transition: 0.2s linear;
+
   }
 }
 
@@ -239,6 +191,7 @@ form{
     transition:.2s linear;
     &:hover{
       box-shadow:0 0 0 rgba(#e91e63,.0);
+
     }
   }
 }
@@ -271,40 +224,9 @@ form{
     background: rgba(#0f132a,.2);
     height:1px;
     width:45%;
+
   }
 }
-
-.Kakao__btn{
-   display:block;
-   width:90%;
-   max-width:680px;
-   margin:20px auto;
-   height:50px;
-   cursor:pointer;
-   font-size:14px;
-   font-family: 'Montserrat', sans-serif;
-   border-radius:8px;
-   border:none;
-   line-height:40px;
-   &.Kakao__btn {
-    background: #FFEB00;
-    color: #8B4513;
-    box-shadow: 0 15px 30px rgba(#8B4513, .36);
-    transition: 0.2s linear;
-
-    .kakao-icon {
-        max-width: 30px; 
-        max-height: 30px;
-        vertical-align: middle; 
-        margin-right: 10px;
-    }
-
-    &:hover {
-        box-shadow: 0 0 0 rgba(#8B4513, .0);
-    }
-}
-
-   }
 
 
 footer{
